@@ -1,0 +1,154 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "VT323", monospace;
+}
+
+body {
+    background-color: #414141;
+}
+
+#game-board {
+    border-radius: 100px;
+    display: grid;
+    grid-template-columns: repeat(20,20px);
+    grid-template-rows: repeat(20,20px);
+    margin: 5px;    
+}
+
+.game-border-1 {
+    border: #595f43 solid 10px;
+    border-radius: 30px;
+    box-shadow: inset 0 0 0 10px #595f43;
+}
+
+.game-border-2{
+    border: #abb78a solid 8px;
+    border-radius: 26px;
+    box-shadow: inset 0 0 0 10px #abb78a;
+}
+
+.game-border-3{
+    border: #8b966c solid 30px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 0 5px #8b966c;
+}
+
+#instruction-text {
+    position: absolute;
+    top: 60%;
+    color: #333;
+    width: 300px;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 30px;
+    margin: 0;
+}
+
+.scores {
+    display: flex;
+    justify-content: space-between;
+}
+
+#score {
+    color: #abb78a;
+}
+
+#score,
+#highScore {
+    font-size: 40px;
+    font-weight: bolder;
+    margin: 10px 0;
+}
+
+#highScore {
+    color: #d8ddca;
+    display: none;
+}
+
+#equation-display {
+    display: none;
+    text-align: center;
+    font-size: 36px;
+    color: #abb78a;
+    letter-spacing: 2px;
+    margin: 4px 0;
+}
+
+.game-border-3 {
+    background-color: #c4cfa3;
+}
+
+.snake {
+    background-color: #6abf69;
+    border: 1px solid #4a9e4a;
+    border-radius: 4px;
+}
+
+/* Head is slightly darker and fully rounded */
+.snake-head {
+    background-color: #3d8b3d;
+    border-radius: 6px;
+    position: relative;
+    overflow: visible;
+}
+
+/* Eyes — two small dots via ::before and ::after */
+.snake-head::before,
+.snake-head::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #222;
+}
+
+/* Eye positions per direction */
+.snake-head[data-dir="right"]::before  { top: 3px;  left: 11px; }
+.snake-head[data-dir="right"]::after   { top: 11px; left: 11px; }
+
+.snake-head[data-dir="left"]::before   { top: 3px;  left: 3px;  }
+.snake-head[data-dir="left"]::after    { top: 11px; left: 3px;  }
+
+.snake-head[data-dir="up"]::before     { top: 3px;  left: 3px;  }
+.snake-head[data-dir="up"]::after      { top: 3px;  left: 11px; }
+
+.snake-head[data-dir="down"]::before   { top: 11px; left: 3px;  }
+.snake-head[data-dir="down"]::after    { top: 11px; left: 11px; }
+
+.food {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e63946;
+    border: 2px solid #c1121f;
+    border-radius: 50% 50% 45% 45%;
+    font-size: 11px;
+    font-family: "VT323", monospace;
+    font-weight: bold;
+    color: #fff;
+    overflow: visible;
+}
+
+/* stem — kept inside the cell so it never bleeds into adjacent snake segments */
+.food::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 4px;
+    background-color: #4a7c59;
+    border-radius: 1px;
+}
+
+#logo {
+    position: absolute;
+}

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 210" width="240" height="210">
+
+  <!-- Body outline -->
+  <path d="M 30 165 Q 25 125 55 112 Q 85 99 88 128 Q 91 157 115 158 Q 139 159 140 132 Q 141 105 122 97"
+        stroke="#4a9e4a" stroke-width="26" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Body fill -->
+  <path d="M 30 165 Q 25 125 55 112 Q 85 99 88 128 Q 91 157 115 158 Q 139 159 140 132 Q 141 105 122 97"
+        stroke="#6abf69" stroke-width="20" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Head outline -->
+  <circle cx="120" cy="72" r="30" fill="#4a9e4a"/>
+
+  <!-- Head -->
+  <circle cx="120" cy="72" r="27" fill="#3d8b3d"/>
+
+  <!-- Blush -->
+  <circle cx="104" cy="83" r="7" fill="#ff8888" opacity="0.45"/>
+  <circle cx="136" cy="83" r="7" fill="#ff8888" opacity="0.45"/>
+
+  <!-- Eye whites -->
+  <circle cx="110" cy="65" r="10" fill="white"/>
+  <circle cx="130" cy="65" r="10" fill="white"/>
+
+  <!-- Pupils -->
+  <circle cx="111" cy="66" r="6" fill="#1a1a1a"/>
+  <circle cx="131" cy="66" r="6" fill="#1a1a1a"/>
+
+  <!-- Eye shine -->
+  <circle cx="113" cy="63" r="2.5" fill="white"/>
+  <circle cx="133" cy="63" r="2.5" fill="white"/>
+
+  <!-- Smile -->
+  <path d="M 109 82 Q 120 92 131 82" stroke="#1a1a1a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Tongue -->
+  <path d="M 120 99 L 120 112" stroke="#e63946" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 120 112 L 113 121 M 120 112 L 127 121" stroke="#e63946" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Title -->
+  <text x="120" y="197" font-family="VT323, monospace" font-size="34" fill="#3d5a1e"
+        text-anchor="middle" letter-spacing="2" font-weight="bold">Snaky Math</text>
+
+</svg>
