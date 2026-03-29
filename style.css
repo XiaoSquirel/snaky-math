@@ -10,9 +10,6 @@ body {
     overflow-x: hidden;
 }
 
-#game-wrapper {
-    transform-origin: top center;
-}
 
 body {
     background-color: #414141;

@@ -1,12 +1,8 @@
 // Scale the game to fit the screen on small devices
 function scaleGame() {
-    const wrapper = document.getElementById('game-wrapper');
-    const gameWidth = 530; // approximate rendered width in px
+    const gameWidth = 540;
     const scale = Math.min(1, (window.innerWidth - 16) / gameWidth);
-    wrapper.style.transform = `scale(${scale})`;
-    // Compensate layout space lost by scaling down
-    const height = wrapper.offsetHeight;
-    wrapper.style.marginBottom = `${(scale - 1) * height}px`;
+    document.body.style.zoom = scale;
 }
 window.addEventListener('resize', scaleGame);
 window.addEventListener('load', scaleGame);
