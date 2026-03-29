@@ -2,9 +2,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 16px 0;
+    box-sizing: border-box;
     font-family: "VT323", monospace;
+    overflow-x: hidden;
+}
+
+#game-wrapper {
+    transform-origin: top center;
 }
 
 body {
