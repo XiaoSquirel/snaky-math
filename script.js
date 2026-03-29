@@ -1,6 +1,6 @@
 // Scale the game to fit the screen on small devices
 function scaleGame() {
-    const gameWidth = 540;
+    const gameWidth = 500;
     const scale = Math.min(1, (window.innerWidth - 16) / gameWidth);
     document.body.style.zoom = scale;
 }
@@ -132,8 +132,8 @@ function scheduleSequence(seq, type, vol, startTime) {
 }
 
 function scheduleBGMLoop(startTime) {
-    scheduleSequence(bgmMelody, 'square',   0.12, startTime);
-    scheduleSequence(bgmBass,   'triangle', 0.08, startTime);
+    scheduleSequence(bgmMelody, 'square',   0.05, startTime);
+    scheduleSequence(bgmBass,   'triangle', 0.03, startTime);
     bgmNextLoop = startTime + BGM_LOOP_DURATION;
 }
 
@@ -172,8 +172,8 @@ function stopBGM() {
 }
 
 // Game variables
-let gridSize = 20;
-let snake = [{ x: 10, y: 10 }];
+let gridSize = 10;
+let snake = [{ x: 5, y: 5 }];
 let foods = [];
 let currentEquation = null;
 let highScore = 0;
@@ -439,7 +439,7 @@ function checkCollision() {
 function resetGame() {
     updateHighScore();
     stopGame();
-    snake = [{ x: 10, y: 10 }];
+    snake = [{ x: 5, y: 5 }];
     foods = [];
     direction = 'right';
     gameSpeedDelay = 200;
