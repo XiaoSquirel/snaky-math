@@ -394,6 +394,21 @@ function handlekeypress(event) {
 
 document.addEventListener('keydown', handlekeypress);
 
+// D-pad buttons
+function handleDpad(newDirection) {
+    if (!gameStarted) {
+        startGame();
+        return;
+    }
+    const opposite = { up: 'down', down: 'up', left: 'right', right: 'left' };
+    if (direction !== opposite[newDirection]) direction = newDirection;
+}
+
+document.getElementById('btn-up').addEventListener('click',    () => handleDpad('up'));
+document.getElementById('btn-down').addEventListener('click',  () => handleDpad('down'));
+document.getElementById('btn-left').addEventListener('click',  () => handleDpad('left'));
+document.getElementById('btn-right').addEventListener('click', () => handleDpad('right'));
+
 function increaseSpeed() {
     if      (gameSpeedDelay > 150) gameSpeedDelay -= 5;
     else if (gameSpeedDelay > 100) gameSpeedDelay -= 3;
