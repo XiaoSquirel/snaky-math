@@ -442,7 +442,7 @@ function resetGame() {
     snake = [{ x: 5, y: 5 }];
     foods = [];
     direction = 'right';
-    gameSpeedDelay = 200;
+    gameSpeedDelay = 300;
     currentEquation = null;
     equationDisplay.style.display = 'none';
     equationDisplay.textContent = '';
