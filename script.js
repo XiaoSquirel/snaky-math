@@ -419,10 +419,10 @@ document.getElementById('btn-left').addEventListener('click',  () => handleDpad(
 document.getElementById('btn-right').addEventListener('click', () => handleDpad('right'));
 
 function increaseSpeed() {
-    //if      (gameSpeedDelay > 150) gameSpeedDelay -= 3;
-    //else if (gameSpeedDelay > 100) gameSpeedDelay -= 2;
-    //else if (gameSpeedDelay > 50)  gameSpeedDelay -= 1;
-    //else if (gameSpeedDelay > 25)  gameSpeedDelay -= 1;
+    if      (gameSpeedDelay > 150) gameSpeedDelay -= 3;
+    else if (gameSpeedDelay > 100) gameSpeedDelay -= 2;
+    else if (gameSpeedDelay > 50)  gameSpeedDelay -= 1;
+    else if (gameSpeedDelay > 25)  gameSpeedDelay -= 1;
 }
 
 // Self-collision only (wall handled in move())
