@@ -179,7 +179,7 @@ let currentEquation = null;
 let highScore = 0;
 let direction = 'right';
 let gameInterval;
-let gameSpeedDelay = 200;
+let gameSpeedDelay = 300;
 let gameStarted = false;
 
 // Generate a random math equation and its answer
